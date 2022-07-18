@@ -143,22 +143,6 @@ catch (HttpClientException $e) {
 
 
 
-/*
-function list_categorias($parent=""){
-  global $woocommerce;
-  try { 
-    return $woocommerce->get('products/categories',array('_fields'=>array('id','per_page' => 1, 'page' => 1)));	
-  } catch(HttpClientException $e) {
-    //print_r($e->getMessage());
-  //print_r($e->getRequest());
-    print_r($e->getResponse());
-}
-
-}
-
-*/
-
-
 function get_categoria($idcat){
 global $woocommerce;
 try {

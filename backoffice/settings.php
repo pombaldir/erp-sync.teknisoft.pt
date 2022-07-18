@@ -152,7 +152,6 @@ $tree = @buildTree($categoriasweb,$catTreeTop);
 
 
 
-
 #######################################################   PRESTASHOP  ##################################################
 if($platform=="prestashop"){
 $tree=$tree[0]['_children'][0]['_children'];

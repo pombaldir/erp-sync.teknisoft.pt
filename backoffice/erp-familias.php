@@ -48,7 +48,6 @@ $json=file_get_contents("$urlws", false, stream_context_create($arrContextOption
 $obj = json_decode(remove_utf8_bom($json), true);
 
 
-
 #######################################################   woocommerce  ##################################################
 if($platform=="woocommerce"){
 include_once DOCROOT.'/include/functions.woocommerce.php';	
