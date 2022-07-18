@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteRule    ^([A-Za-z0-9-]+)/ad$        			$1.php?act=ad    			[NC,L]
+RewriteRule    ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([0-9]+)?$    $1.php?act=$2&num=$3    	[NC,L]
+RewriteRule    ^([A-Za-z0-9-]+)/([0-9]+)/?$    		$1.php?act=view&num=$2    	[NC,L]
+RewriteRule    ^logout$                       		login.php?act=logout    	[NC,L] 
+RewriteRule    ^image/([0-9]+)/([0-9]+)$           image.php?usr=$1&artigo=$2 	[NC,L] 
+RewriteRule    ^([A-Za-z0-9-]+)$                   $1.php    [NC,L]
+RewriteRule    ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)$   $1/$2.php    [NC,L]
+

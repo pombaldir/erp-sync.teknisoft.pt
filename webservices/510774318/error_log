@@ -1,0 +1,26 @@
+[23-Nov-2017 12:27:37 Europe/Lisbon] PHP Warning:  mssql_connect(): Unable to connect to server: 192.168.2.21:1433 in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/conn_mssql.php on line 17
+[05-Jan-2019 17:39:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_connect() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/conn_mssql.php:15
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/artigos.php(7): include()
+#1 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/conn_mssql.php on line 15
+[05-Jan-2019 17:40:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_connect() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/conn_mssql.php:15
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/artigos.php(7): include()
+#1 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/conn_mssql.php on line 15
+[05-Jan-2019 17:40:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_connect() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/conn_mssql.php:15
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/artigos.php(7): include()
+#1 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/conn_mssql.php on line 15
+[05-Jan-2019 17:40:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_connect() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/conn_mssql.php:15
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/familias.php(7): include()
+#1 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/conn_mssql.php on line 15
+[08-Jan-2019 19:44:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_connect() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/conn_mssql.php:15
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/artigos.php(7): include()
+#1 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/510774318/conn_mssql.php on line 15

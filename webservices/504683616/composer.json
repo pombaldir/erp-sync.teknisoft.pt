@@ -1,0 +1,14 @@
+{
+    "name": "nelsonsantos/profor2020",
+    "description": "ERP Sinc Profor",
+    "authors": [
+        {
+            "name": "pombaldir",
+            "email": "pombaldir@pombaldir.com"
+        }
+    ],
+    "require": {
+        "catfan/medoo": "^1.7",
+        "phpmailer/phpmailer": "^6.1"
+    }
+}

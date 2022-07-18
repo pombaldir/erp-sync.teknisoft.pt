@@ -1,0 +1,587 @@
+﻿<script src="<?php echo URLBASE;?>/vendors/gasparesganga-jquery-loading-overlay/dist/loadingoverlay.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/quagga/dist/quagga.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/bootbox/bootbox.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/switchery/dist/switchery.min.js"></script>
+	 
+	
+<?php 
+    $imagemdef=settings_val(1,"imagem");  
+    $imagemdef=$imagemdef['filename'];
+    if(is_file(DOCROOT."/attachments/".$_SESSION['empresaID']."/$imagemdef")){
+			$imgDef="<img class=\"fotoPrincipal\" src=\"".URLBASE."/attachments/".$_SESSION['empresaID']."/$imagemdef\" alt=\"\">";	 	 
+		 }  else {
+			$imgDef="<img class=\"fotoPrincipal\" src=\"".URLBASE."/images/user.png\" alt=\"\">"; 
+    }
+?> 
+
+
+<?php if($act==""){ ?>  
+<!-- iCheck -->
+<script src="<?php echo URLBASE;?>/vendors/iCheck/icheck.min.js"></script>
+<!-- Datatables -->
+<script src="<?php echo URLBASE;?>/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/jszip/dist/jszip.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/pdfmake/build/pdfmake.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/pdfmake/build/vfs_fonts.js"></script>  
+<script src="<?php echo URLBASE;?>/vendors/select2/dist/js/select2.min.js"></script>
+ 
+<script src="<?php echo URLBASE;?>/vendors/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/blueimp-file-upload/js/jquery.fileupload.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.3/js/fileinput.min.js" integrity="sha512-vDrq7v1F/VUDuBTB+eILVfb9ErriIMW7Dn3JC/HOQLI8ZzTBTRRKrKJO3vfMmZFQpEGVpi+EYJFatPgVFxOKGA==" crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function() {  
+
+var oTable = $('#table<?php echo $p;?>').DataTable( {
+			"aaSorting": [[ 4, "asc" ]],
+			"bProcessing": true,
+			"bServerSide": true,
+			"stateSave": true,
+			"aoColumnDefs": [ 
+		 	{ "bVisible":  false, "bSearchable": false, "aTargets": [ 0,1,2,3,10 ]},
+			{ "bVisible":  true, "bSearchable": false, "aTargets": [ 6 ]}, 
+			{ "bVisible":  true, "bSearchable": false, "bSortable": false, "aTargets": [ 6,7,11 ], "sClass": "text-center"},
+            { "bVisible":  true, "bSearchable": false, "bSortable": true, "aTargets": [ 8,9 ], "sClass": "text-center"},    
+                {
+                //data:   "active", 
+                render: function ( data, type, row ) {
+                    if ( type === 'display' ) {
+                        return '<input type="checkbox" class="chkbx" value="1" id="'+row[0]+'" data-idref="'+row[3]+'">';
+                    }
+                    return data;
+                },
+                "sClass": "text-center",
+                "className": "dt-body-center",
+				"aTargets": [9]
+                },
+                {
+                "render": function ( data, type, row ) {
+                        return '<a href="#'+row[0]+'">'+data +'</a>';
+                        }, "aTargets": [4]
+                },
+                {   
+                "render": function ( data, type, row ) {
+                        if(row[12]=="1"){ 
+                            var imgFoto='<input class="fileupload" id="'+row[0]+'" type="file" data-foto="'+row[10]+'" data-idref="'+row[3]+'" class="file" data-preview-file-type="image">'; } else {
+                                imgFoto='<input class="fileupload" id="'+row[0]+'" type="file" data-foto="'+row[10]+'" data-idref="'+row[3]+'" class="file" data-preview-file-type="image">';    
+                        }
+                        return '<table border="0" width="100%"><tr><td align="right"><a href="<?php echo URLBASE;?>/erp-artigos/edit/'+row[0]+'" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i>editar</a></td><td align="left">'+imgFoto+'</td></tr></table>';
+                }, "aTargets": [11]
+            }	 
+	 		],
+			"sAjaxSource": "<?php echo $settings['erp_ws'];?>/referencias.php", 
+            "lengthMenu": [[20, 50, 100, 200, 4000], [20, 50, 100, 200, "Todos"]], 
+	        "bPaginate": true,
+	        "bSort": true,
+			"sDom": "<'row'<'dataTables_header clearfix'<'col-md-1'l><'col-xs-2 selFamilia'><'col-xs-2 selMarca'><'col-xs-2 selWeb'><'col-md-5'f>r>>t<'row'<'dataTables_footer clearfix'<'col-md-6'i><'col-md-6'p>>>",
+			"fnServerParams": function ( aoData ) {
+		    	aoData.push({ "name": "auth_userid", "value": "<?php echo $settings['ws_token'];?>" },{ "name": "act_g", "value": "list" },{ "name": "Familia", "value": $('#selFamilia').val() },{ "name": "Marca", "value": $('#selMarca').val() },{ "name": "bitDispWeb", "value": $('#webprodts').val()},{ "name": "nivFam", "value": "<?php echo $settings['tpfamilia'];?>" },{ "name": "nivMarca", "value": "<?php echo $settings['tpmarcas'];?>" });
+		    },
+			"rowCallback": function ( row, data ) {
+				$.each(data, function(i, item) {
+				var idRow=data[0];	
+                var RefAtiva=data[10]; 
+                if(RefAtiva==1){ var ativSubRow=false;  } else { ativSubRow=true; } 
+                    
+				if(i==5){
+                    
+					if(data[9]==1){ 
+					$(row).find('td:eq('+i+') > input.chkbx').attr("id",idRow).prop("checked",true).attr("disabled",ativSubRow);
+					} else {		
+					$(row).find('td:eq('+i+') > input.chkbx').attr("id",idRow).prop("checked",false).attr("disabled",ativSubRow);
+					}
+				}
+				}); 
+			},
+            "drawCallback": function ( settings ) {
+                var api = this.api();
+                var rows = api.rows( {page:'current'} ).nodes();
+                var last=null;
+                api.column(2, {page:'current'} ).data().each( function ( group, i ) {
+                    if ( last !== group ) {
+                        var RefImpor=api.column(10, {page:'current'} ).data()[i];
+                        var RefID=api.column(3, {page:'current'} ).data()[i];
+                        if(RefImpor==1){
+                          var chekedRow="checked";     
+                        } else {
+                              chekedRow=""; 
+                        }
+                        var imgFoto='<input class="fileupload" id="'+RefID+'" type="file" data-foto="'+RefID+'" class="file" data-preview-file-type="image">';  
+                        $(rows).eq( i ).before(
+                            '<tr id="row_'+RefID+'"><td class="table-dark bg-info"><h5>'+api.column(1, {page:'current'} ).data()[i]+'</h5></td><td colspan="4" style="text-align:left;" class="table-dark bg-info"><h5>'+group+'</h5></td><td class="table-dark bg-info" style="text-align:center;" ><input type="checkbox" class="chkbx" value="1" id="'+RefID+'" data-idref="'+RefID+'" '+chekedRow+'></td><td class="table-dark bg-info"><table border="0" width="100%"><tr><td align="right"><a href="<?php echo URLBASE;?>/erp-referencias/edit/'+RefID+'" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i>editar</a></td><td align="left">'+imgFoto+'</td></tr></table></td></tr>'
+                        );
+                        last = group;                        
+                    }
+                });
+                
+                
+                $(".fileupload").fileinput({
+                    uploadUrl: "<?php echo $settings['erp_ws'];?>/artigos.php",
+                    language: 'pt',
+                    uploadExtraData:function(){
+                        var self = this, $el = self.$element, $cont, t, tmp;
+                        var inputid = $el.attr('id');
+                        var idref =  $("#"+inputid).data('idref'); 
+                        return {
+                            act_p: 'editFoto', 
+                            tipo: "mainfoto",
+                            auth_userid: "<?php echo $settings['ws_token'];?>",
+                            idnum:inputid,
+                            id_ref:idref
+                        };
+                    },
+                    maxFileCount: 1,  
+                    msgUploadEnd: 'ok',
+                    progressClass: 'hidden',
+                    showUpload:false, 
+                    showPreview: false,
+                    'previewFileType':'any',
+                    'dropZoneEnabled':false,
+                    'showRemove': false,
+                    'browseLabel': '',
+                    'showCaption': false,
+                    'browseIcon': '<i class="fa fa-image"></i>',
+                    'browseClass': 'btn btn-xs btn-primary',
+                    layoutTemplates: {
+                        progress: '<div class="progress hide">\n' +
+                        '    <div class="progress-bar progress-bar-success progress-bar-striped text-center" role="progressbar" aria-valuenow="{percent}" aria-valuemin="0" aria-valuemax="100" style="width:{percent}%;">\n' +
+                        '        {status}\n' +
+                        '     </div>\n' +
+                        '</div>\n' +
+                        '{stats}'
+                    }
+                }).on('fileuploaded', function(event, previewId, index, fileId) {
+                    console.log('File Uploaded', 'ID: ' + fileId + ', Thumb ID: ' + previewId.files[fileId]+' Nome:'+previewId.files[0]['name']);
+                    new PNotify({
+							title: previewId.files[0]['name']+"",
+							type: "success",
+							text: "<i class=\"fa fa-upload\"></i> enviado com sucesso",
+							nonblock: {
+							nonblock: true
+							},
+							addclass: 'light',
+							styling: 'bootstrap3',
+							hide: true						  
+				    });   
+                    //$('#filenameModelo').val(previewId.files[0]['name']); 
+                }).on('fileuploaderror', function(event, data, msg) {
+                    //console.log('File Upload Error', 'ID: ' + data.fileId + ', Thumb ID: ' + data.previewId);
+                    //console.log(event);
+                    new PNotify({
+							title: "Erro a importar imagem",
+							type: "error",
+							text: "<i class=\"fa fa-warning\"></i> "+msg+"<br>",
+							nonblock: {
+							nonblock: true
+							},
+							addclass: 'light',
+							styling: 'bootstrap3',
+							hide: true						  
+				    });  
+                    $(this).fileinput('reset');
+                     
+                    
+                }).on('filebatchuploadcomplete', function(event, files, extra) {
+                    console.log('File Batch Uploaded', extra);
+                   // $('.fileinput-upload-button').hide();
+                    $(this).closest('.btn-file').removeClass('btn-primary').addClass('btn-success');
+                    var idFile=event.currentTarget.id;
+                    $('#'+idFile).parent('td').LoadingOverlay("hide"); 
+                    
+                }).on('filebatchselected', function(event, files) {
+                    var idFile=event.currentTarget.id;
+                    //console.log("elemento "+idFile);
+                    $(this).fileinput('upload');
+                    
+                   $('#'+idFile).parent('td').LoadingOverlay("show", {
+					image: '',
+                    fontawesome : "fa fa-cog fa-spin",
+					"font-size" : "12px",
+					text        : "",
+					progress    : true
+				    });
+                    
+                   // $('#'+idFile).fileinput('reset');
+                   // $(this).fileinput('refresh');
+                });
+    
+            },
+			"oLanguage": {
+				"sInfo": "_START_ a _END_ de _TOTAL_ registos",
+				"sLengthMenu": "_MENU_",
+				"sInfoEmpty": "Não existem registos",	
+				"sEmptyTable": "Não existem registos",	
+				"sZeroRecords": "Não existem registos a exibir",
+				"sSearch": "Pesquisar: ",
+				"oPaginate": {
+				  "sPrevious": "Anterior",
+				  "sNext": "Seguinte",
+				  "sFirst": "Início",
+				  "sLast": "Última"
+				},
+				"sInfoFiltered": ""
+			}
+	       }); 
+	 	   
+ /*   
+$("#table<?php echo $p;?> tbody").delegate("input.chkbx", "click", function( e ) {        
+    oTable.draw();   
+        console.log("Change");
+    if(this.checked) {
+        //Do stuff
+    }
+});
+  */  
+    
+		   
+	$('.selFamilia').html('<select class="form-control selFam" style="width:100%" name="selFamilia" id="selFamilia"></select>');
+		$('#selFamilia').select2({
+			ajax: {
+				url: '<?php echo "".$settings['erp_ws']."/familias.php?act_g=listaFamNiveis&tpnivel=".$settings['tpfamilia']."&auth_userid=".$settings['ws_token']."";?>'
+			},
+			allowClear: true,
+			placeholder: 'Família'
+	}).on("change", function (e) { oTable.draw();  });	
+	
+	$('.selMarca').html('<select class="form-control selFam" style="width:100%" name="selMarca" id="selMarca"></select>');
+		$('#selMarca').select2({
+			ajax: {
+				url: '<?php echo "".$settings['erp_ws']."/familias.php?act_g=listaFamNiveis&tpnivel=".$settings['tpmarcas']."&auth_userid=".$settings['ws_token']."";?>'
+			},
+			allowClear: true,
+			placeholder: 'Marca'
+	}).on("change", function (e) { oTable.draw();  });	
+	$('.selWeb').html('<div class="checkbox"><label><input type="checkbox" name="webprodts" class="flat" id="webprodts" value=""> Artigos web</label></div>').on("ifChecked", function (e) { $('#webprodts').val(1); oTable.draw();  }).on("ifUnchecked", function (e) { $('#webprodts').val(0);  oTable.draw();  });	
+	
+	
+	
+		
+$('div.dataTables_length').width('100%');
+$('div.dataTables_length select').select2();		   
+	 	   		   
+// Seleciona os artigos para cada checkbox
+	$("#table<?php echo $p;?> tbody").delegate("input:checkbox", "click", function( e ) {
+        var idArtigo=$(this).closest('input[id]').attr('id');  
+        var idRef=$(this).closest('input').data('idref');        
+            if ( $(this).is(":checked") ) 
+            {
+                $(this).closest("tr").addClass("row_selected");  
+				// Progress
+				$("#row_"+idArtigo).LoadingOverlay("show", {
+					image       : "",
+					fontawesome : "fa fa-cog fa-spin",
+					"font-size" : "14px",
+					text        : "A importar para a loja...",
+					progress    : true
+				});
+				
+  
+ 				$.ajax({
+              	type : "POST",
+				dataType: "json",
+              	url : '<?php echo $settings['erp_ws'];?>/artigos.php',
+              	data : {"act_p": "checkweb", "auth_userid": "<?php echo $settings['ws_token'];?>", "id_artigo": idArtigo,"id_ref":idRef},
+              	success: function(data, textStatus, xhr) {				
+					var artigo=data.artigo; 	
+					console.log(artigo);						
+					$.ajax({
+						type : "POST", 
+						dataType: "json",
+						url : '<?php echo URLBASE;?>/data/callb.php',
+						data : {"accaoP": "cb_artigo_a","id_artigo":idArtigo,"id_ref":idRef,"platform":"<?php echo $settings['store'];?>", "detail":artigo},
+						success: function(data, textStatus, xhr) {
+							console.log(data);
+                            $('.ui-pnotify').remove();
+							new PNotify({
+							title: "Importação ERP-Loja Online",
+							type: ""+data.type+"",
+							text: ""+data.message+"",
+							nonblock: {
+							nonblock: true
+							},
+							addclass: 'light',
+							styling: 'bootstrap3',
+							hide: true						  
+							}); 
+						$("#row_"+idArtigo).LoadingOverlay("hide");	
+                        //oTable.draw();   
+						oTable.row( this ).draw( false ); 
+						},
+						 error: function (request, status, error) {
+							console.log("Erro: "+request.responseText);
+							$("#row_"+idArtigo).LoadingOverlay("hide");	
+							console.log(error);
+						}
+				});	 	
+				},
+              	 error: function (request, status, error) {
+					$("#row_"+idArtigo).LoadingOverlay("hide");	 
+					//alert("Erro: "+request.responseText);
+					console.log(request.responseText);
+					console.log(error);
+				}
+        		});
+            }
+            else 
+            {
+                //alert(idArtigo); return false;
+                $(this).closest("tr").removeClass("row_selected");
+                $("#row_"+idArtigo).LoadingOverlay("show", {
+					image       : "",
+					fontawesome : "fa fa-cog fa-spin",
+					"font-size" : "14px",
+					text        : "A remover...",
+					progress    : true
+				});
+                
+ 				$.ajax({
+              	type : "POST",
+				dataType: "json",
+              	url : '<?php echo $settings['erp_ws'];?>/artigos.php',
+              	data : {"act_p": "uncheckweb", "auth_userid": "<?php echo $settings['ws_token'];?>", "id_artigo":idArtigo, "id_ref":idRef},
+              	success: function(data, textStatus, xhr) {
+				var idartgod=data.idartigo; 
+				
+				$.ajax({
+              		type : "POST", 
+              		url : '<?php echo URLBASE;?>/data/callb',
+              		data : {"accaoP": "cb_artigo_d", "id_artigo": idartgod, "id_ref":""+idRef+"", "platform": "<?php echo $settings['store'];?>"},
+					success: function(data, textStatus, xhr) {	
+						console.log(data);
+					   $('.ui-pnotify').remove();
+						new PNotify({
+						title: "Importação ERP-Loja Online",
+						type: ""+data.type+"",
+						text: ""+data.message+"",
+						nonblock: {
+						nonblock: true
+						},
+						addclass: 'light',
+						styling: 'bootstrap3',
+						hide: true						  
+						});
+						$("#row_"+idArtigo).LoadingOverlay("hide");	 
+						oTable.row( this ).draw( false ); 
+					},
+              	error: function (request, status, error) {
+					  /*
+					new PNotify({
+						title: "Erro",
+						type: "error",
+						text: ""+request.responseText+"",
+						nonblock: {
+						nonblock: true
+						},
+						addclass: 'light',
+						styling: 'bootstrap3',
+						hide: true						  
+					}); 
+					*/
+					console.log(request.responseText);
+					$("#row_"+idArtigo).LoadingOverlay("hide");		
+				}
+				});	 		
+					
+              	},
+              	error: function (request, status, error) {
+					alert("Erro: "+request.responseText);
+					console.log(error);
+				}
+        		});				
+            }
+	});		   
+		   
+		   
+		   
+		   
+
+		   
+		   
+		    
+});
+
+</script>
+  <?php } if($act=="edit"){ ?>  
+<script src="<?php echo URLBASE;?>/vendors/bootbox/bootbox.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/blueimp-file-upload/js/jquery.fileupload.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="<?php echo URLBASE;?>/vendors/iCheck/icheck.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="<?php echo URLBASE;?>/vendors/google-code-prettify/src/prettify.js"></script>    
+<!-- Switchery -->
+<script src="<?php echo URLBASE;?>/vendors/switchery/dist/switchery.min.js"></script>
+        
+<script>
+$(document).ready(function() {  
+
+/* Elimina Foto */
+$(document).on('click', '.elimFoto', function(){
+event.preventDefault();
+var idFoto=(this).id;
+var tipoAtt=$(this).attr("data-tipo");
+eliminaATT(tipoAtt,idFoto); 
+});	
+/* /Elimina Foto */
+
+function eliminaATT(tipo,idFoto){
+bootbox.confirm("<h4>Deseja eliminar este ficheiro?</h4>", function(result){
+		  	if (result) {
+			console.log("Eliminar Foto:"+tipo+" ("+idFoto+")");
+			$.ajax({
+				 type: "POST",
+				 url: "<?php echo $prefs['erp_ws'];?>/referencias.php",
+				 data: {act_p:"delFoto",idAtt:""+idFoto+"",tipo:""+tipo+"","idartigo":"<?php echo $num;?>","auth_userid":"<?php echo $prefs['ws_token'];?>"},
+				 dataType: "json",
+				 success: function(data){	
+					  
+					new PNotify({
+							title: "Eliminar Ficheiro",
+							type: ""+data.type+"",
+							text: ""+data.message+"",
+							nonblock: {
+							nonblock: true
+							},
+							styling: 'bootstrap3',
+							hide: true
+					}); 
+					
+					if(data.success==1 && (tipo=="mainfoto")){
+						$('#imgpredef').attr('src','<?php echo URLBASE."/attachments/".$_SESSION['empresaID']."/$imagemdef";?>');	
+					}	/*
+					if(data.success==1 && tipo=="anexos"){
+						$("#anexo"+idFoto).remove();				
+					}
+					*/
+				},
+				error: function(xhr, status, error) {
+				console.log(error);
+				   new PNotify({
+						title: "Erro",
+						type: "warning",
+						text: ""+xhr.responseText+"",
+						nonblock: {
+						nonblock: true
+						},
+						styling: 'bootstrap3',
+						hide: true
+					}); 
+				}
+			});	
+			}
+		});	
+}
+/* /Elimina Foto */
+
+
+    // Change this to the location of your server-side upload handler:
+    $('#fileupload').fileupload({
+        url: '<?php echo URLBASE;?>/data/UploadHandler',
+        dataType: 'json',
+        done: function (e, data) {
+			
+            $.each(data.result.files, function (index, file) {
+		    $('#imgpredef').attr('src',''+file.url+'');
+			new PNotify({
+				title: "Enviar Imagem",
+				type: "info",
+				text: ""+file.name+"",
+				nonblock: { nonblock: true },
+				styling: 'bootstrap3',
+				hide: true
+				}); 		   	    
+			$('#imgpredef').attr('src',''+file.url+'');		
+			/*$.ajax({
+				url: ''+file.deleteUrl+'',
+				type: 'DELETE'
+				});*/
+			});	
+			
+        },
+		error: function (jqXHR, textStatus, errorThrown) {
+			new PNotify({
+						title: "Erro",
+						type: "warning",
+						text: ""+textStatus+"<br>"+errorThrown+"",
+						nonblock: {
+						nonblock: true
+						},
+						styling: 'bootstrap3',
+						hide: true
+			}); 
+			console.log(jqXHR);
+		
+		},
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progressB .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');	
+
+
+
+
+$( "form" ).on( "submit", function( event ) {
+  event.preventDefault();
+  <?php if($act=="edit"){ ?>  
+  $("#descr").val($("#editor-one").html());
+  <?php }  ?> 
+  $.ajax({
+  type: "POST",
+  url: "<?php echo $prefs['erp_ws'];?>/referencias.php",
+  data: $( this ).serialize(),
+  dataType: "json",
+  success: function(data){
+	new PNotify({
+		title: "Formulário submetido",
+		type: ""+data.type+"",
+		text: ""+data.message+"",
+		nonblock: {
+		nonblock: true
+		},
+		addclass: 'dark',
+		styling: 'bootstrap3',
+		hide: true,
+		before_close: function(PNotify) { PNotify.queueRemove(); return false; }
+	}); 
+  },
+ 	error: function (request, status, error) {
+	alert("Erro: "+request.responseText);
+	console.log(error);
+}
+});
+});
+
+
+
+
+});	  
+</script>
+
+ 
+  <?php } ?>
+
+
+

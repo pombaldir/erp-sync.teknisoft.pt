@@ -1,0 +1,9 @@
+{
+    "require": {
+        "catfan/Medoo": "^1.6",
+        "automattic/woocommerce": "^3.0",
+        "phpmailer/phpmailer": "^6.0",
+        "symfony/polyfill-mbstring": "^1.10",
+        "psr/log": "^1.1"
+    }
+}

@@ -1,0 +1,346 @@
+[05-Jan-2019 14:57:57 Europe/Lisbon] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:1) in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 1
+[05-Jan-2019 14:57:57 Europe/Lisbon] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:1) in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 2
+[05-Jan-2019 14:57:57 Europe/Lisbon] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:1) in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 3
+[05-Jan-2019 14:57:57 Europe/Lisbon] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:1) in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 4
+[05-Jan-2019 14:57:57 Europe/Lisbon] PHP Warning:  include(conn_mssql.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 5
+[05-Jan-2019 14:57:57 Europe/Lisbon] PHP Warning:  include(conn_mssql.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 5
+[05-Jan-2019 14:57:57 Europe/Lisbon] PHP Warning:  include(): Failed opening 'conn_mssql.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 5
+[05-Jan-2019 14:58:03 Europe/Lisbon] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:1) in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 1
+[05-Jan-2019 14:58:03 Europe/Lisbon] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:1) in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 2
+[05-Jan-2019 14:58:03 Europe/Lisbon] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:1) in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 3
+[05-Jan-2019 14:58:03 Europe/Lisbon] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:1) in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 4
+[05-Jan-2019 14:58:03 Europe/Lisbon] PHP Warning:  include(conn_mssql.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 5
+[05-Jan-2019 14:58:03 Europe/Lisbon] PHP Warning:  include(conn_mssql.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 5
+[05-Jan-2019 14:58:03 Europe/Lisbon] PHP Warning:  include(): Failed opening 'conn_mssql.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 5
+[05-Jan-2019 14:58:17 Europe/Lisbon] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:1) in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 1
+[05-Jan-2019 14:58:17 Europe/Lisbon] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:1) in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 2
+[05-Jan-2019 14:58:17 Europe/Lisbon] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:1) in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 3
+[05-Jan-2019 14:58:17 Europe/Lisbon] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:1) in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 4
+[05-Jan-2019 14:58:17 Europe/Lisbon] PHP Warning:  include(conn_mssql.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 5
+[05-Jan-2019 14:58:17 Europe/Lisbon] PHP Warning:  include(conn_mssql.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 5
+[05-Jan-2019 14:58:17 Europe/Lisbon] PHP Warning:  include(): Failed opening 'conn_mssql.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 5
+[05-Jan-2019 14:58:41 Europe/Lisbon] PHP Warning:  include(conn_mssql.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 5
+[05-Jan-2019 14:58:41 Europe/Lisbon] PHP Warning:  include(conn_mssql.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 5
+[05-Jan-2019 14:58:41 Europe/Lisbon] PHP Warning:  include(): Failed opening 'conn_mssql.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 5
+[05-Jan-2019 14:58:52 Europe/Lisbon] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 14:58:52 Europe/Lisbon] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 14:58:52 Europe/Lisbon] PHP Fatal error:  require(): Failed opening required 'vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 14:59:42 Europe/Lisbon] PHP Warning:  require_once(/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/vendor/autoload.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 14:59:42 Europe/Lisbon] PHP Fatal error:  require_once(): Failed opening required '/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:00:18 Europe/Lisbon] PHP Warning:  require_once(/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/vendor/autoload.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:00:18 Europe/Lisbon] PHP Fatal error:  require_once(): Failed opening required '/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:00:21 Europe/Lisbon] PHP Warning:  require_once(/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/vendor/autoload.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:00:21 Europe/Lisbon] PHP Fatal error:  require_once(): Failed opening required '/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:00:37 Europe/Lisbon] PHP Warning:  require_once(/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188../vendor/autoload.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:00:37 Europe/Lisbon] PHP Fatal error:  require_once(): Failed opening required '/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:00:45 Europe/Lisbon] PHP Warning:  require_once(/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/../vendor/autoload.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:00:45 Europe/Lisbon] PHP Fatal error:  require_once(): Failed opening required '/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:01:05 Europe/Lisbon] PHP Warning:  require_once(/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188../vendor/autoload.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:01:05 Europe/Lisbon] PHP Fatal error:  require_once(): Failed opening required '/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:01:52 Europe/Lisbon] PHP Warning:  require_once(/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188../vendor): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:01:52 Europe/Lisbon] PHP Fatal error:  require_once(): Failed opening required '/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188../vendor' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:02:18 Europe/Lisbon] PHP Warning:  require_once(/home/teknisoftcp/erp-sync.teknisoft.pt/webservices../vendor/autoload.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:02:18 Europe/Lisbon] PHP Fatal error:  require_once(): Failed opening required '/home/teknisoftcp/erp-sync.teknisoft.pt/webservices../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:02:25 Europe/Lisbon] PHP Warning:  require_once(/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/autoload.php): failed to open stream: No such file or directory in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:02:25 Europe/Lisbon] PHP Fatal error:  require_once(): Failed opening required '/home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php on line 15
+[05-Jan-2019 15:02:57 Europe/Lisbon] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Unsupported PDO driver: sqlsrv' in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(44): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:03:01 Europe/Lisbon] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Unsupported PDO driver: sqlsrv' in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(44): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:03:26 Europe/Lisbon] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Unsupported PDO driver: sqlsrv' in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(45): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:03:58 Europe/Lisbon] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY001] Unable to allocate sufficient memory (SERVERPDI4\SQL2014) (severity 8)' in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(45): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:04:06 Europe/Lisbon] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY001] Unable to allocate sufficient memory (SERVERPDI4\SQL2014) (severity 8)' in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(45): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:04:19 Europe/Lisbon] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY001] Unable to allocate sufficient memory (SERVERPDI4\SQL2014) (severity 8)' in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(45): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:04:47 Europe/Lisbon] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Unsupported PDO driver: sqlsrv' in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(44): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:05:09 Europe/Lisbon] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Unsupported PDO driver: sqlsrv' in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(27): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:06:16 Europe/Lisbon] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Unsupported PDO driver: sqlsrv' in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(45): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:06:39 Europe/Lisbon] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Unsupported PDO driver: sqlsrv' in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(45): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:16:09 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unsupported PDO driver: sqlsrv in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(22): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:16:12 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unsupported PDO driver: sqlsrv in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(22): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:16:26 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unsupported PDO driver: sqlsrv in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(22): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:19:28 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unsupported PDO driver: sqlsrv in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(22): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:19:31 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unsupported PDO driver: sqlsrv in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(22): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:27:00 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unsupported PDO driver: sqlsrv in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(22): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:27:03 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unsupported PDO driver: sqlsrv in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:280
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(22): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 280
+[05-Jan-2019 15:34:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(22): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:35:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(22): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:35:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(22): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:36:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(22): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:37:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(23): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:37:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(23): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:38:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(23): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:38:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(23): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:39:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(23): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:41:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(23): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:42:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(23): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:43:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(23): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:44:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_query() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:142
+Stack trace:
+#0 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 142
+[05-Jan-2019 15:45:31 UTC] PHP Warning:  sqlsrv_query() expects at least 2 parameters, 1 given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 142
+[05-Jan-2019 15:45:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_get_last_message() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:142
+Stack trace:
+#0 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 142
+[05-Jan-2019 15:46:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(34): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:47:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(34): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:48:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(34): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[05-Jan-2019 15:48:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_query() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:142
+Stack trace:
+#0 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 142
+[05-Jan-2019 15:48:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_query() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:142
+Stack trace:
+#0 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 142
+[05-Jan-2019 16:16:58 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 360
+[05-Jan-2019 16:25:16 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 360
+[05-Jan-2019 19:42:32 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 360
+[05-Jan-2019 19:42:32 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 360
+[05-Jan-2019 19:42:38 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 360
+[05-Jan-2019 19:42:38 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 360
+[05-Jan-2019 19:43:14 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 360
+[05-Jan-2019 19:43:14 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 360
+[05-Jan-2019 19:43:52 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 360
+[05-Jan-2019 19:44:16 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 360
+[05-Jan-2019 19:45:17 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 360
+[05-Jan-2019 19:46:20 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 360
+[05-Jan-2019 20:02:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_query() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:167
+Stack trace:
+#0 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 167
+[05-Jan-2019 20:03:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 181
+[05-Jan-2019 20:16:06 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 146
+[05-Jan-2019 20:16:59 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 146
+[05-Jan-2019 20:17:46 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 146
+[05-Jan-2019 20:26:01 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 147
+[05-Jan-2019 20:29:02 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 150
+[05-Jan-2019 20:30:04 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 152
+[05-Jan-2019 20:31:37 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 152
+[05-Jan-2019 20:46:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Medoo' not found in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:147
+Stack trace:
+#0 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 147
+[05-Jan-2019 20:53:18 UTC] PHP Fatal error:  Uncaught Error: Class 'Medoo' not found in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:149
+Stack trace:
+#0 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 149
+[05-Jan-2019 20:53:34 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, object given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 609
+[05-Jan-2019 20:53:55 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, object given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 609
+[05-Jan-2019 20:54:17 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, object given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 609
+[05-Jan-2019 20:54:30 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, object given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 609
+[05-Jan-2019 20:58:42 UTC] PHP Catchable fatal error:  Object of class Medoo\Raw could not be converted to string in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 149
+[05-Jan-2019 20:58:46 UTC] PHP Catchable fatal error:  Object of class Medoo\Raw could not be converted to string in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 149
+[05-Jan-2019 21:01:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HYT00]: [unixODBC][Microsoft][ODBC Driver 13 for SQL Server]Login timeout expired in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/settings.php(22): Medoo\Medoo->__construct(Array)
+#1 /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php(5): include('/home/teknisoft...')
+#2 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 321
+[07-Jan-2019 13:04:37 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 232
+[07-Jan-2019 13:05:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_query() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:49
+Stack trace:
+#0 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 49
+[07-Jan-2019 13:06:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_query() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:49
+Stack trace:
+#0 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 49
+[07-Jan-2019 13:09:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_query() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:56
+Stack trace:
+#0 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 56
+[07-Jan-2019 13:10:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mssql_query() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/artigos.php on line 57
+[09-Jan-2019 12:08:06 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1103
+[09-Jan-2019 12:08:06 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1115
+[09-Jan-2019 12:08:16 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1103
+[09-Jan-2019 12:08:16 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1115
+[09-Jan-2019 12:08:27 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1103
+[09-Jan-2019 12:08:27 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1115
+[09-Jan-2019 12:09:13 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1103
+[09-Jan-2019 12:09:13 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1115
+[09-Jan-2019 12:10:35 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1103
+[09-Jan-2019 12:10:35 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1115
+[09-Jan-2019 12:11:39 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1103
+[09-Jan-2019 12:11:39 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1115
+[09-Jan-2019 12:11:39 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1150
+[09-Jan-2019 12:11:39 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1150
+[09-Jan-2019 12:11:39 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1150
+[09-Jan-2019 12:11:39 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1150
+[09-Jan-2019 12:11:39 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1150
+[09-Jan-2019 12:11:39 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1150
+[09-Jan-2019 12:11:39 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1150
+[09-Jan-2019 12:11:39 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1150
+[09-Jan-2019 12:11:39 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1150
+[09-Jan-2019 12:11:39 UTC] PHP Warning:  Illegal offset type in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1150
+[09-Jan-2019 16:20:04 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/familias.php on line 148
+[09-Jan-2019 18:35:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/teste.php on line 20
+[10-Jan-2019 00:24:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1144
+[10-Jan-2019 00:25:36 UTC] PHP Warning:  base64_encode() expects parameter 1 to be string, object given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/teste.php on line 22
+[10-Jan-2019 00:25:36 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1144
+[10-Jan-2019 00:31:02 UTC] PHP Warning:  base64_encode() expects parameter 1 to be string, object given in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/teste.php on line 22
+[10-Jan-2019 00:31:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/vendor/catfan/medoo/src/Medoo.php on line 1144
+[10-Jan-2019 00:46:39 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/teste.php on line 21
+[10-Jan-2019 00:46:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/teknisoftcp/erp-sync.teknisoft.pt/webservices/505565188/teste.php on line 21
