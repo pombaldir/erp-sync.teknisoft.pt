@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => '127.0.0.1',
+    'database_port' => '',
+    'database_name' => 'erpsinc_ps',
+    'database_user' => 'root',
+    'database_password' => 'root',
+    'database_prefix' => 'ps_',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => 'Sp41I0C3WQxhkOqgqfTwDX0Jgu2YTABknPGvUr7YrvtyF0eiJ8u28IVA',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2020-08-20',
+    'locale' => 'pt-PT',
+    'use_debug_toolbar' => true,
+    'cookie_key' => 'UiPG3i0NIu9rEj5dco9xh7RN3jNoFRZw58fonF2e7Wc3OWxoCuEwttGC',
+    'cookie_iv' => 'ACV1uVbM',
+    'new_cookie_key' => 'def0000000baeb139b937e1ba4daa17084134d8de15b5606a4b1df2f9aa236e7a1e9842f17d59a2aa076349d9e2f7f1a0528ebdb6be05c1b6fa14fb3bbd01bd7161c9428',
+  ),
+);
