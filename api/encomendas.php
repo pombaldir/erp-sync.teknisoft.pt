@@ -19,7 +19,9 @@ $sTable = "Mov_Encomenda_Cab";
 * Columns
 */  
 $aColumns = array("Id","strCodSeccao", "strAbrevTpDoc", "strCodExercicio", "intNumero", "strNumero", "strNumExterno", "dtmData", "strHora", "bitAnulado", "intTpEntidade", "intCodEntidade", "intDireccao", "fltDescontoCab", "fltDescontoFin", "strCodCondPag", "strNumRequisicao", "dtmDataRequisicao", "dtmDataVencimento","strAbrevSubZona", "strAbrevMoeda", "fltCambio", "strMeioExpedicao","strLocalCarga","strLocalDescarga", "strObs", "strECVDNumContrib", "strECVDNome", "strECVDMorada",  "strECVDLocalidade", "strECVDCodPostal", "strECVDTelefone", "bitECVDRetIRS", "intCodVendedor", "intTpComissao", "fltComissaoValor", "fltComissaoPercent", "fltComissaoPenaliz", "fltComissaoValorBase", "bitComissaoDispLiq", "dtmComissaoDataDisp","intTpComissaoDescontos", "bitIvaIncluido", "bitRegimeVenda", "fltInfTotalArtigos", "fltInfTotalLinhas", "fltInfTotalQtd", "fltTotalMercadoriaSIVA", "fltTotalMercadoriaCIVA","fltTotalDescontosSIVA","fltTotalDescontosCIVA", "fltTotalDescontosFinSIVA", "fltTotalDescontosFinCIVA", "fltTotalOutrosSIVA", "fltTotalOutrosCIVA", "fltTotalAcertos","intIVACodTaxa1", "intIVACodTaxa2", "fltIVATaxa1", "fltIVATaxa2", "fltIVAIncidencia1", "fltIVAIncidencia2", "fltIVAValor1", "fltIVAValor2", "fltTotalIVA", "fltSubTotal", "fltIRSTaxa", "fltIRSIncidencia", "fltIRSValorRetido", "fltTotal", "fltTotalPagamentos", "fltTroco", "strAplicacaoOrigem", "dtmDataAbertura", "dtmDataAlteracao", "strCodRubrica", "bitArrImpostos","dtmDataEntregaCab", "strHoraEntregaCab","intCodCatEntidade", "intLinhaPreco", "dtmDataEstado", "strObsEstado", "strCodEstadoDoc","fltTotalToPay", "strMotivoIsencao","strLogin", "strLoginCriacao", "strLoginEstado", "dtmDataAlteracaoEstado","intPrintCount");  
-
+if(isset($CA_Enc_CAB)){
+    $aColumns=array_merge($aColumns,$CA_Enc_CAB); 
+} 
 
 $aLinhas=array("strCodSeccao", "strAbrevTpDoc", "strCodExercicio", "intNumero", "intNumLinha", "intTpLinha", "strCodArmazem", "strCodArtigo", "strDescArtigo", "strCodLote", "fltQuantidade", "fltQuantidadePend", "fltQuantidadeAnul", "fltQuantidadeSatisf", "intNumLinhaReserva", "fltQtdReservarStk","fltPrecoUnitario","strCodClassMovStk","strObs","fltDesconto1", "fltDesconto2", "fltDesconto3", "fltDescontoValorUnit", "fltDescontoValor", "fltValorLiquido", "intCodTaxaIVA", "fltTaxaIVA","fltComissaoPerc", "fltComissaoValor", "fltComissaoLinha", "fltValorMercadoriaCIVA", "fltValorMercadoriaSIVA", "fltValorDescontosCIVA", "fltValorDescontosSIVA","fltValorDescontosFinCIVA", "fltValorDescontosFinSIVA", "fltValorAPagar", "Id", "CA_Campo01","strMotivoIsencaoIVA", "strCodOficialMotIVAIsencao");
 
@@ -33,7 +35,7 @@ $strAbrevTpDoc=$data['strAbrevTpDoc'];
 $strCodSeccao=$data['strCodSeccao'];      
 $strCodExercicio=$data['strCodExercicio'];      
     
-$queryCliente = $database->select($sTable, ["Id"], ["intNumero" => $intNumero]);	      
+$queryCliente = $database->select($sTable, ["Id"], ["intNumero" => $intNumero,"strCodSeccao" => $strCodSeccao,"strAbrevTpDoc" => $strAbrevTpDoc,"strCodExercicio" => $strCodExercicio]);	      
      
 if(is_array($queryCliente) && sizeof($queryCliente)>0){
     die(json_encode(array("success"=>0,"errormsg"=>"Código existente")));  
@@ -43,10 +45,22 @@ else if(!isset($data['intTpEntidade'])){
 }    
 else {
     
-$encLinhas=$data['linhas'];  
+$encLinhas = $data['linhas'];  
+foreach ($encLinhas as $key => $linha) {
+    foreach ($linha as $coluna => $valor) {
+        // se o campo começa por "flt" e não é nulo/vazio, converte para float
+        if (strpos($coluna, 'flt') === 0 ) {
+            $encLinhas[$key][$coluna] = (float) $valor;
+        }
+    }
+}
+
+
 unset($data['Id'],$data['linhas'],$data['intPrintCount']);     
      
 $database->insert($sTable, $data);  
+//die(json_encode($database->error()));  
+
 $idRegisto = $database->id();
     
 if($idRegisto>0){      
@@ -54,9 +68,13 @@ if($idRegisto>0){
     ## Atualiza Numerador ####
     $database->update("Tbl_Numeradores", ["intNum_Mes00" => $intNumero],["strAbrevTpDoc" => $strAbrevTpDoc,"strCodSeccao" => $strCodSeccao,"strCodExercicio" =>$strCodExercicio]);
 
-    recursive_unset($encLinhas, "Id"); 
-    $database->insert("Mov_Encomenda_Lin", $encLinhas); 
-    $idLinhas = $database->id();        
+    if(!is_array($encLinhas) || sizeof($encLinhas)==0){
+        die(json_encode(array("success"=>1,"errormsg"=>"Sem linhas para inserir. Inserido apenas cabeçalho.","Id"=>$idRegisto)));  
+    } else {
+        recursive_unset($encLinhas, "Id"); 
+        $database->insert("Mov_Encomenda_Lin", $encLinhas); 
+        $idLinhas = $database->id();   
+    }     
         
     if($idLinhas>0){  
         die(json_encode(array("success"=>1,"message"=>"Encomenda criada","Id"=>$idRegisto)));   
@@ -70,9 +88,9 @@ if($idRegisto>0){
         $database->update("Tbl_Numeradores", ["intNum_Mes00" => $intNumeroAnt],["strAbrevTpDoc" => $strAbrevTpDoc,"strCodSeccao" => $strCodSeccao,"strCodExercicio" =>$strCodExercicio]);
         die(json_encode(array("success"=>0,"errormsg"=>$erroBD)));       
     }
-        
+         
 } else {
-    die(json_encode(array("success"=>0,"errormsg"=>$database->error())));       
+    die(json_encode(array("success"=>0,"errormsg"=>$database->error(),"errormsg"=>$database->log())));       
 }
 
 } 

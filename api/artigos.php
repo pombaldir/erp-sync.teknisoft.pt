@@ -149,7 +149,9 @@ if($accao=="list"){
     * Columns
     */ 
 	$aColumns = array("Id","strCodigo", "intCodInterno", "strCodBarras", "strAbreviatura", "strCodCategoria", "strTpArtigo", "strDescricao", "fltPCReferencia", "intCodTaxaIvaVenda", "intCodTaxaIvaCompra","strAbrevMedStk","bitNaoMovStk","bitEVSujeito","bitCusto","bitProveito");    
-        
+    if(isset($CA_Artigos)){
+        $aColumns=array_merge($aColumns,$CA_Artigos); 
+    } 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */     
     /*
      * Ordering

@@ -49,7 +49,12 @@ if($accao=="list"){
     else if($_GET['tipo']=="tipofamilias"){
         $sTable = "Tbl_Gce_Tipos_Familias"; 
         $aColumns = array("Id", "strCodigo", "strDescricao", "intNivel"); 
-    }     
+    }  
+    
+    else if($_GET['tipo']=="codBarras"){
+        $sTable = "Tbl_Gce_ArtigosCodigoBarras"; 
+        $aColumns = array("Id", "strCodArtigo", "strCodBarras", "fltQuantidade"); 
+    } 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */     
     /*
      * Ordering

@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInitd221a67fd0b8032ddc75cd05bc0ec247
 {
     public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
         'M' => 
         array (
             'Medoo\\' => 6,
@@ -14,10 +18,18 @@ class ComposerStaticInitd221a67fd0b8032ddc75cd05bc0ec247
     );
 
     public static $prefixDirsPsr4 = array (
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
         'Medoo\\' => 
         array (
             0 => __DIR__ . '/..' . '/catfan/medoo/src',
         ),
+    );
+
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -25,6 +37,7 @@ class ComposerStaticInitd221a67fd0b8032ddc75cd05bc0ec247
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitd221a67fd0b8032ddc75cd05bc0ec247::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitd221a67fd0b8032ddc75cd05bc0ec247::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitd221a67fd0b8032ddc75cd05bc0ec247::$classMap;
 
         }, null, ClassLoader::class);
     }
