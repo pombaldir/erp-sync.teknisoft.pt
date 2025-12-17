@@ -1,9 +1,9 @@
 _notes/dwsync.xml
 .history/*
-_wordpress*
 _wordpress/*
 _wordpress2/*
 _prestashop/*
 work
 api/*
-_wordpress/*
+_wordpress/wp-load.php
+_wordpress/wp-content/*
