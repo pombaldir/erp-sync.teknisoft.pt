@@ -2,7 +2,7 @@
 <module>
 	<name>ERPSinc</name>
 	<displayName><![CDATA[ERP Sinc]]></displayName>
-	<version><![CDATA[1.0.0]]></version>
+	<version><![CDATA[1.0.1]]></version>
 	<description><![CDATA[Sincronizador ERP-Prestashop. Mais informações visite: https://www.erpsinc.pt]]></description>
 	<author><![CDATA[Pombaldir.com Serviços Internet Unip. Lda.]]></author>
 	<tab><![CDATA[others]]></tab>

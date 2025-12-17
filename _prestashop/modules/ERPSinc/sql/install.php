@@ -31,11 +31,12 @@ $sql[] = ' CREATE TABLE IF NOT EXISTS `' . _DB_PREFIX_ . 'erpsinc` (
 				`tokenp` varchar(255),
 				`encomendas` int(1),
 				`stocks` int(1),
+                `debug_email` varchar(255),
                 PRIMARY KEY (`idnum`)
             ) ENGINE=' . _MYSQL_ENGINE_ . ' DEFAULT CHARSET=utf8;';
 
 
-$sql[] = 'INSERT INTO `' . _DB_PREFIX_ . 'erpsinc` (`idnum`,`url`,`tokenp`,`encomendas`,`stocks`) VALUES (1,\'https://erpsinc.pt/webservices\',\'\',0,0);';
+$sql[] = 'INSERT INTO `' . _DB_PREFIX_ . 'erpsinc` (`idnum`,`url`,`tokenp`,`encomendas`,`stocks`,`debug_email`) VALUES (1,\'https://erpsinc.pt/webservices\',\'\',0,0,\'\');';
 
 
 foreach ($sql as $query) {
@@ -43,4 +44,3 @@ foreach ($sql as $query) {
         return false;
     }
 }
-

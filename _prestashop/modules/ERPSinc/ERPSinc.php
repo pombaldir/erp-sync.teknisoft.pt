@@ -40,6 +40,9 @@ class CustomTextERP extends ObjectModel
     /** @var String $text - HTML format of CustomTextERP values */
 	public $text;
 
+    /** @var string $debug_email - email address used for debug notifications */
+    public $debug_email;
+
 	/**
 	 * @see ObjectModel::$definition
 	 */
@@ -54,6 +57,7 @@ class CustomTextERP extends ObjectModel
 			'tokenp' =>			array('type' => self::TYPE_STRING, 'validate' => 'isGenericName', 'required' => false),
 			'encomendas' =>		array('type' => self::TYPE_INT),
 			'stocks' =>		    array('type' => self::TYPE_INT),
+            'debug_email' =>    array('type' => self::TYPE_STRING, 'validate' => 'isEmail', 'required' => false),
 		)
 	);	
 }
@@ -71,7 +75,7 @@ class ERPSinc extends Module
     {
         $this->name = 'ERPSinc';
         $this->tab = 'others';
-        $this->version = '1.0.0';
+        $this->version = '1.0.1';
         $this->author = 'Pombaldir.com Serviços Internet Unip. Lda.';
         $this->need_instance = 0;
 
@@ -156,12 +160,14 @@ class ERPSinc extends Module
 		$tokenp = Tools::getValue('tokenp');
 		$encomendas = Tools::getValue('encomendas');
 		$stocks = Tools::getValue('stocks');
+        $debug_email = Tools::getValue('debug_email');
         $ERPSINC_LIVE_MODE = Tools::getValue('ERPSINC_LIVE_MODE');
         
 		$info->url = $url;
 		$info->tokenp = $tokenp;
 		$info->encomendas = $encomendas;
 		$info->stocks = $stocks;
+        $info->debug_email = $debug_email;
         Configuration::updateValue('ERPSINC_LIVE_MODE', $ERPSINC_LIVE_MODE);  
 		
 		$saved &= $info->update();
@@ -209,10 +215,11 @@ class ERPSinc extends Module
         Shop::setContext(Shop::CONTEXT_SHOP, $idShop);
         $info = new CustomTextERP((int)$idInfo);
 
-        $fields_value['url'] = $info->url;
+		$fields_value['url'] = $info->url;
 		$fields_value['tokenp'] = $info->tokenp;
 		$fields_value['encomendas'] = $info->encomendas;
 		$fields_value['stocks'] = $info->stocks;
+        $fields_value['debug_email'] = $info->debug_email;
 		$fields_value['ERPSINC_LIVE_MODE'] = Configuration::get('ERPSINC_LIVE_MODE', true);
 		
         $fields_value['idnum'] = $idInfo; 
@@ -292,6 +299,14 @@ class ERPSinc extends Module
                             )
                         ),
                     ),
+                array(
+                    'type' => 'text',
+                    'label' => $this->l('Email para debug'),
+                    'name' => 'debug_email',
+                    'desc' => $this->l('Email usado para receber logs de encomendas em modo debug'),
+                    'class' => 'rte input fixed-width-xl',
+                    'autoload_rte' => true,
+                ),
                 array(
                     'type' => 'switch',
                     'label' => $this->getTranslator()->trans('Atualizar Stock', array(), 'Modules.Imageslider.Admin'),
@@ -387,7 +402,14 @@ class ERPSinc extends Module
                     
                     $orderCabF=(object)array_merge((array)$orderCab,array("customer"=>$customer),array("billing"=>$address_invoice),array("shipping"=>$address_delivery),array("details"=>$orderDetail)); 		
 
-                    ERPSINC_OrderProcess($params['id_order'],json_decode(json_encode($orderCabF), true),$vars['cms_infos']['url'],$vars['cms_infos']['tokenp'],1);
+                    ERPSINC_OrderProcess(
+                        $params['id_order'],
+                        json_decode(json_encode($orderCabF), true),
+                        $vars['cms_infos']['url'],
+                        $vars['cms_infos']['tokenp'],
+                        1,
+                        $vars['cms_infos']['debug_email']
+                    );
                 }
             }
         }
@@ -407,7 +429,14 @@ class ERPSinc extends Module
 
                     $orderCabF=(object)array_merge((array)$orderCab,array("customer"=>$customer),array("billing"=>$address_invoice),array("shipping"=>$address_delivery),array("details"=>$orderDetail)); 		
 
-                    ERPSINC_OrderProcess($params['id_order'],json_decode(json_encode($orderCabF), true),$vars['cms_infos']['url'],$vars['cms_infos']['tokenp'],1);
+                    ERPSINC_OrderProcess(
+                        $params['id_order'],
+                        json_decode(json_encode($orderCabF), true),
+                        $vars['cms_infos']['url'],
+                        $vars['cms_infos']['tokenp'],
+                        1,
+                        $vars['cms_infos']['debug_email']
+                    );
                 }
             }
         }
@@ -451,7 +480,7 @@ class ERPSinc extends Module
 
 
 ###########################################################  FUNÇÕES DO PLUGIN  ######################################################
-function ERPSINC_OrderProcess($order_id,$orderDetail,$urlws,$chave,$debug) {	
+function ERPSINC_OrderProcess($order_id,$orderDetail,$urlws,$chave,$debug,$debugEmail = '') {	
 
 $params = array("act_p" => "order_create","auth_userid" => $chave,"dados" => serialize($orderDetail),"store" => "prestashop","txtlinha" => "","debug" => "".$debug."");
 $fields_string="";
@@ -492,13 +521,14 @@ $fields_string="";
     
 
 	if($debug==1){
+        $recipient = !empty($debugEmail) ? $debugEmail : 'webmaster@pombaldir.com';
 		Mail::Send((int)(Configuration::get('PS_LANG_DEFAULT')),
 						'contact', // email template file to be use
 						'Debug: Enc#'.$order_id.' Log', // email subject
 						array(
 							'{email}' => Configuration::get('PS_SHOP_EMAIL'),
 							'{message}' => '<br><hr> '.print_r(json_encode($params,true),true).'<hr>'.print_r(json_encode($callb_msg,true),true).'' // email content
-						),'webmaster@pombaldir.com',NULL,NULL,NULL);	
+						),$recipient,NULL,NULL,NULL);	
 						
 	}
  }
