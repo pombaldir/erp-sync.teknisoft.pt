@@ -7,3 +7,4 @@ work
 api/*
 _wordpress/wp-load.php
 _wordpress/wp-content/*
+_wordpress/*
