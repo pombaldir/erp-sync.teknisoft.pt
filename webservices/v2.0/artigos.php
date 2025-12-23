@@ -11,6 +11,7 @@ ini_set( 'mssql.textlimit' , '2147483647' );
 ini_set( 'mssql.textsize' , '2147483647' );
 
 
+//die(print_r($_GET)); 
 
 if((isset($_GET['auth_userid']) &&  $_GET['auth_userid']=="$tokenAPI") || (isset($_POST['auth_userid']) && $_POST['auth_userid']=="$tokenAPI")) {
 	 

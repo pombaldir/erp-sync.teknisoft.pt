@@ -2,13 +2,15 @@
 if (basename($_SERVER['SCRIPT_FILENAME']) == basename(__FILE__)) {
    # header('HTTP/1.0 403 Forbidden');
 #    exit('Forbidden');
-}
+}/*
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL); */
 //ini_set('memory_limit','512M');
 require_once dirname(__DIR__) . '/v2.0/vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use Medoo\Medoo;
-
 
 
 if(isset($_GET['auth_userid']) || isset($_POST['auth_userid'])){
@@ -40,6 +42,32 @@ switch ($tokenAPI) {
 		$depFinTpContacto="002"; 
 		$wsLog=0; 
         break;  
+
+
+    case "4nBUXnbHdGwj8H2G":        // TREVOS e CASTELOS			
+        $bdServer="192.168.1.90";
+		$bdUser="sa";
+		$bdPswd="17#PblDataETI";
+		$bdName="Emp_TREVO";
+		$Medlog=true;	
+        $EncstrAbrevTpDoc="ENCWB";
+		$orderDefSeller="5";
+		$custmDefSeller="5"; 
+		$subzona="PT";
+		$strCodCondPag="1";
+		$strCodSeccao="2";
+		$intIVACodTaxa1="7";
+		$fltIVATaxa1="23"; 
+		$strLogin="";
+		$codDiversos="DIV";
+		$codPortes=1;
+		$armazemDefault="1"; 
+        $strMeioExpedicao="ABX";
+		$faturaEletronica="0"; 
+		$depFinTpContacto="002"; 
+		$wsLog=0; 
+        break;  
+
         
     case "O0Al8gGITm7hnHm":		   // POMBALDIR	
         $bdServer="192.168.1.98";
@@ -136,6 +164,34 @@ switch ($tokenAPI) {
 		$depFinTpContacto="002"; 
 		$wsLog=0; 
         break; 
+
+
+
+	case "w6uYCkqqEWyw":		   // ELECTROMINOR	
+			$bdServer="192.168.1.90";
+			$bdUser="sa";
+			$bdPswd="17#PblDataETI";
+			$bdName="Emp_ELCT";
+			$Medlog=true;	
+			$EncstrAbrevTpDoc="ENCCL";
+			$orderDefSeller="1";
+			$custmDefSeller="1"; 
+			$subzona="7";
+			$strCodCondPag="1";
+			$strCodSeccao="4";
+			$intIVACodTaxa1="7";
+			$fltIVATaxa1="23"; 
+			$strLogin="";
+			$codDiversos="DIV";
+			$codPortes="9191.TORP";
+			$armazemDefault="3"; 
+			$strMeioExpedicao="";
+			$faturaEletronica="0"; 
+			$depFinTpContacto="002"; 
+			$wsLog=0; 
+	break;  
+
+
     case "DzAl9gSITm3hnbq":		   // LIVE SOUND	
         $bdServer="192.168.1.93";
 		$bdUser="sa";
@@ -296,11 +352,7 @@ case "sR8kN2nO2aA9cX6u":		   // EASY MONEY
 	$wsLog=1; 
 break;  
 
-
-
-
 }
-    
     
     
 

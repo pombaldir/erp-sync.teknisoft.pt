@@ -25,6 +25,33 @@ if(isset($CA_Enc_CAB)){
 
 $aLinhas=array("strCodSeccao", "strAbrevTpDoc", "strCodExercicio", "intNumero", "intNumLinha", "intTpLinha", "strCodArmazem", "strCodArtigo", "strDescArtigo", "strCodLote", "fltQuantidade", "fltQuantidadePend", "fltQuantidadeAnul", "fltQuantidadeSatisf", "intNumLinhaReserva", "fltQtdReservarStk","fltPrecoUnitario","strCodClassMovStk","strObs","fltDesconto1", "fltDesconto2", "fltDesconto3", "fltDescontoValorUnit", "fltDescontoValor", "fltValorLiquido", "intCodTaxaIVA", "fltTaxaIVA","fltComissaoPerc", "fltComissaoValor", "fltComissaoLinha", "fltValorMercadoriaCIVA", "fltValorMercadoriaSIVA", "fltValorDescontosCIVA", "fltValorDescontosSIVA","fltValorDescontosFinCIVA", "fltValorDescontosFinSIVA", "fltValorAPagar", "Id", "CA_Campo01","strMotivoIsencaoIVA", "strCodOficialMotIVAIsencao");
 
+function formatDateValue($value) {
+    if ($value instanceof DateTimeInterface) {
+        return $value->format('Y-m-d H:i:s');
+    }
+
+    if (is_string($value) && preg_match('/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}/', $value)) {
+        $date = date_create($value);
+        if ($date) {
+            return $date->format('Y-m-d H:i:s');
+        }
+    }
+
+    return $value;
+}
+
+function normalizeDateOutput(array $data) {
+    foreach ($data as $key => $value) {
+        if (is_array($value)) {
+            $data[$key] = normalizeDateOutput($value);
+        } else {
+            $data[$key] = formatDateValue($value);
+        }
+    }
+
+    return $data;
+}
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -59,6 +86,8 @@ foreach ($encLinhas as $key => $linha) {
 unset($data['Id'],$data['linhas'],$data['intPrintCount']);     
      
 $database->insert($sTable, $data);  
+$erroBD=$database->error(); 
+$LogerroBD=$database->log(); 
 //die(json_encode($database->error()));  
 
 $idRegisto = $database->id();
@@ -66,7 +95,7 @@ $idRegisto = $database->id();
 if($idRegisto>0){      
     
     ## Atualiza Numerador ####
-    $database->update("Tbl_Numeradores", ["intNum_Mes00" => $intNumero],["strAbrevTpDoc" => $strAbrevTpDoc,"strCodSeccao" => $strCodSeccao,"strCodExercicio" =>$strCodExercicio]);
+    $database->update("Tbl_Numeradores", ["intNum_Mes00" => $intNumero],["strAbrevTpDoc" => $strAbrevTpDoc,"strCodSeccao" => $strCodSeccao,"strCodExercicio" =>$strCodExercicio, "intTpNumerador"=>1]);
 
     if(!is_array($encLinhas) || sizeof($encLinhas)==0){
         die(json_encode(array("success"=>1,"errormsg"=>"Sem linhas para inserir. Inserido apenas cabeçalho.","Id"=>$idRegisto)));  
@@ -80,19 +109,18 @@ if($idRegisto>0){
         die(json_encode(array("success"=>1,"message"=>"Encomenda criada","Id"=>$idRegisto)));   
     } else {
         $erroBD=$database->error(); 
+        $LogerroBD=$database->log(); 
         ## Remove Enomenda   
         $database->delete("Mov_Encomenda_Lin", ["strCodSeccao" => $strCodSeccao,"strAbrevTpDoc" =>$strAbrevTpDoc,"strCodExercicio" => $strCodExercicio,"intNumero" => $intNumero]);    
         $database->delete("Mov_Encomenda_Cab", ["Id" => $idRegisto]);    
         ## Reverte Numerador?
         $intNumeroAnt=$intNumero-1;
-        $database->update("Tbl_Numeradores", ["intNum_Mes00" => $intNumeroAnt],["strAbrevTpDoc" => $strAbrevTpDoc,"strCodSeccao" => $strCodSeccao,"strCodExercicio" =>$strCodExercicio]);
-        die(json_encode(array("success"=>0,"errormsg"=>$erroBD)));       
+        $database->update("Tbl_Numeradores", ["intNum_Mes00" => $intNumeroAnt],["strAbrevTpDoc" => $strAbrevTpDoc,"strCodSeccao" => $strCodSeccao,"strCodExercicio" =>$strCodExercicio, "intTpNumerador"=>1]);
+        die(json_encode(array("success"=>0,"errormsg"=>$erroBD,"log"=>$LogerroBD)));       
     }
-         
 } else {
-    die(json_encode(array("success"=>0,"errormsg"=>$database->error(),"errormsg"=>$database->log())));       
+    die(json_encode(array("success"=>0,"errormsg"=>$erroBD,"log"=>$LogerroBD)));       
 }
-
 } 
     
 }
@@ -212,5 +240,6 @@ if($accao=="list"){
    }   
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 if(isset($output)){
+    $output = normalizeDateOutput($output);
     echo json_encode($output );
 }

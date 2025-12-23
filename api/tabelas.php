@@ -28,6 +28,11 @@ if($accao=="list"){
         $sTable = "Tbl_SubZonas"; 
         $aColumns = array("Id","strAbreviatura", "strDescricao", "strAbrevPais", "strAbrevZona");    
     } 
+    else if($_GET['tipo']=="exercicios"){
+        $sTable = "Tbl_Exercicios"; 
+        $aColumns = array("Id", "strCodigo", "dtmInicio", "dtmFim"); 
+        $qParameters=array($aColumns[2],$aColumns[3]);
+    } 
     else if($_GET['tipo']=="taxasiva"){
         $sTable = "Tbl_Taxas_Iva"; 
         $aColumns = array("Id","intCodigo", "strDescricao", "fltTaxa");    
@@ -38,7 +43,7 @@ if($accao=="list"){
     }      
     else if($_GET['tipo']=="numeradores"){
         $sTable = "Tbl_Numeradores"; 
-        $aColumns = array("Id", "strAbrevTpDoc", "strCodSeccao", "strCodExercicio","intNum_Mes00"); 
+        $aColumns = array("Id", "strAbrevTpDoc", "strCodSeccao", "strCodExercicio","intNum_Mes00","intTpNumerador"); 
         $qParameters=array($aColumns[1],$aColumns[2],$aColumns[3]);
     }    
     

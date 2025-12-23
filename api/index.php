@@ -85,6 +85,14 @@ switch ($tokenAPI) {
     
 
 
+    case "24PbJ7xKCM3zutcC":            // MALAS VITESSE		
+        $bdServer="192.168.1.96";
+		$bdUser="sa";
+		$bdPswd="17#PblDataETI";
+		$bdName="Emp_MVITS";
+		$Medlog=false;
+    break;
+
     
     
     case "CByJ4EUXw9TQuxag":        // STEP FREEDOM			
@@ -130,7 +138,11 @@ switch ($tokenAPI) {
 		$bdPswd="17#PblDataETI";
         if(isset($_GET['db']) && $_GET['db']!=""){ 
             $bdName=$_GET['db']; 
-        } else { 
+        } 
+        else if(isset($_POST['db']) && $_POST['db']!=""){ 
+            $bdName=$_POST['db']; 
+        }
+        else { 
             $bdName="emp_125";  
         }
 		$Medlog=false;

@@ -23,26 +23,41 @@ if (isset($_GET['accaoG'])) {
 
 if (isset($_POST['accaoP']) && $accao == "edit" && $_SERVER['REQUEST_METHOD'] == "POST") {
 
-$importar=array();
-$erp = filter_input(INPUT_POST, 'erp', FILTER_SANITIZE_STRING);	
-$store = filter_input(INPUT_POST, 'store', FILTER_SANITIZE_STRING);	
-$erp_ws = filter_input(INPUT_POST, 'erp_ws', FILTER_SANITIZE_STRING);	
-$store_url=filter_input(INPUT_POST, 'store_url', FILTER_SANITIZE_URL);
-$ws_token=filter_input(INPUT_POST, 'ws_token', FILTER_SANITIZE_STRING);
-$ws_api=filter_input(INPUT_POST, 'ws_api', FILTER_SANITIZE_STRING);
-$ws_secret=filter_input(INPUT_POST, 'ws_secret', FILTER_SANITIZE_STRING);
-$preco_linha=filter_input(INPUT_POST, 'preco_linha', FILTER_SANITIZE_STRING);
-$catdefault=filter_input(INPUT_POST, 'catdefault', FILTER_SANITIZE_STRING);
-$catTreeTop=filter_input(INPUT_POST, 'catTreeTop', FILTER_SANITIZE_STRING);
-$tpfamilia=filter_input(INPUT_POST, 'tpfamilia', FILTER_SANITIZE_STRING);
-$tpSfamilia=filter_input(INPUT_POST, 'tpsubfamilia', FILTER_SANITIZE_STRING);
-$tpmarcas=filter_input(INPUT_POST, 'tpmarcas', FILTER_SANITIZE_STRING);
-$portes = isset($_POST['portes']) && $_POST['portes']!="" ? $_POST['portes'] : 0;
+$settingsRegisto=$mysqli->query("select settings from settings where idnum=1") or die($mysqli->errno .' - '. $mysqli->error);
+$dadosAtuais=$settingsRegisto->fetch_array();
+$settingsAtuais=@unserialize($dadosAtuais['settings']);
+if(!is_array($settingsAtuais)){
+	$settingsAtuais=array();
+}
 
-$importar=$_POST['importar'];
-$grelhas=isset($_POST['grelha']) && $_POST['grelha']!="" ? $_POST['grelha'] : array();  
+$importarGuardado=isset($settingsAtuais['importar']) ? @unserialize($settingsAtuais['importar']) : array();
+$grelhasGuardadas=isset($settingsAtuais['grelhas']) ? @unserialize($settingsAtuais['grelhas']) : array();
 
-$settings=serialize(array("erp"=>$erp,"store"=>$store,"erp_ws"=>$erp_ws,"store_url"=>$store_url,"ws_token"=>$ws_token,"ws_api"=>$ws_api,"ws_secret"=>$ws_secret,"importar"=>serialize($importar),"preco_linha"=>$preco_linha,"portes"=>$portes,"catdefault"=>$catdefault,"catTreeTop"=>$catTreeTop,"tpfamilia"=>$tpfamilia,"tpSfamilia"=>$tpSfamilia,"tpmarcas"=>$tpmarcas,"grelhas"=>serialize($grelhas)));
+$settingsNovos=$settingsAtuais;
+
+$settingsNovos['erp'] = array_key_exists('erp', $_POST) ? filter_input(INPUT_POST, 'erp', FILTER_SANITIZE_STRING) : (isset($settingsNovos['erp']) ? $settingsNovos['erp'] : "");
+$settingsNovos['store'] = array_key_exists('store', $_POST) ? filter_input(INPUT_POST, 'store', FILTER_SANITIZE_STRING) : (isset($settingsNovos['store']) ? $settingsNovos['store'] : "");
+$settingsNovos['erp_ws'] = array_key_exists('erp_ws', $_POST) ? filter_input(INPUT_POST, 'erp_ws', FILTER_SANITIZE_STRING) : (isset($settingsNovos['erp_ws']) ? $settingsNovos['erp_ws'] : "");
+$settingsNovos['store_url'] = array_key_exists('store_url', $_POST) ? filter_input(INPUT_POST, 'store_url', FILTER_SANITIZE_URL) : (isset($settingsNovos['store_url']) ? $settingsNovos['store_url'] : "");
+$settingsNovos['ws_token'] = array_key_exists('ws_token', $_POST) ? filter_input(INPUT_POST, 'ws_token', FILTER_SANITIZE_STRING) : (isset($settingsNovos['ws_token']) ? $settingsNovos['ws_token'] : "");
+$settingsNovos['ws_api'] = array_key_exists('ws_api', $_POST) ? filter_input(INPUT_POST, 'ws_api', FILTER_SANITIZE_STRING) : (isset($settingsNovos['ws_api']) ? $settingsNovos['ws_api'] : "");
+$settingsNovos['ws_secret'] = array_key_exists('ws_secret', $_POST) ? filter_input(INPUT_POST, 'ws_secret', FILTER_SANITIZE_STRING) : (isset($settingsNovos['ws_secret']) ? $settingsNovos['ws_secret'] : "");
+$settingsNovos['preco_linha'] = array_key_exists('preco_linha', $_POST) ? filter_input(INPUT_POST, 'preco_linha', FILTER_SANITIZE_STRING) : (isset($settingsNovos['preco_linha']) ? $settingsNovos['preco_linha'] : "");
+$settingsNovos['catdefault'] = array_key_exists('catdefault', $_POST) ? filter_input(INPUT_POST, 'catdefault', FILTER_SANITIZE_STRING) : (isset($settingsNovos['catdefault']) ? $settingsNovos['catdefault'] : "");
+$settingsNovos['catTreeTop'] = array_key_exists('catTreeTop', $_POST) ? filter_input(INPUT_POST, 'catTreeTop', FILTER_SANITIZE_STRING) : (isset($settingsNovos['catTreeTop']) ? $settingsNovos['catTreeTop'] : "");
+$settingsNovos['tpfamilia'] = array_key_exists('tpfamilia', $_POST) ? filter_input(INPUT_POST, 'tpfamilia', FILTER_SANITIZE_STRING) : (isset($settingsNovos['tpfamilia']) ? $settingsNovos['tpfamilia'] : "");
+$settingsNovos['tpSfamilia'] = array_key_exists('tpsubfamilia', $_POST) ? filter_input(INPUT_POST, 'tpsubfamilia', FILTER_SANITIZE_STRING) : (isset($settingsNovos['tpSfamilia']) ? $settingsNovos['tpSfamilia'] : "");
+$settingsNovos['tpmarcas'] = array_key_exists('tpmarcas', $_POST) ? filter_input(INPUT_POST, 'tpmarcas', FILTER_SANITIZE_STRING) : (isset($settingsNovos['tpmarcas']) ? $settingsNovos['tpmarcas'] : "");
+$settingsNovos['portes'] = array_key_exists('portes', $_POST) && $_POST['portes']!="" ? $_POST['portes'] : (isset($settingsNovos['portes']) ? $settingsNovos['portes'] : 0);
+
+$importar=array_key_exists('importar', $_POST) ? $_POST['importar'] : $importarGuardado;
+$grelhas=array_key_exists('grelha', $_POST) && $_POST['grelha']!="" ? $_POST['grelha'] : $grelhasGuardadas;
+
+$settingsNovos['importar']=serialize(is_array($importar) ? $importar : array());
+$settingsNovos['grelhas']=serialize(is_array($grelhas) ? $grelhas : array());
+
+$settings=serialize($settingsNovos);
+$ws_token=$settingsNovos['ws_token'];
 
 $mysqli->query("UPDATE settings set settings='$settings',api='$ws_token' where idnum='1'") or die($mysqli->errno .' - '. $mysqli->error);
 
