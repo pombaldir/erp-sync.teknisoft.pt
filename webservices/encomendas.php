@@ -6,9 +6,12 @@ include("settings.php");
 use Medoo\Medoo;
 use Automattic\WooCommerce\Client;
 use Automattic\WooCommerce\HttpClient\HttpClientException;
+/*
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1); 
+*/
 
 if((isset($_GET['auth_userid']) && $_GET['auth_userid']=="$tokenAPI") || (isset($_POST['auth_userid']) && $_POST['auth_userid']=="$tokenAPI")) {
  
@@ -22,6 +25,7 @@ $debug=stripslashes($_POST['debug']);
 if(isset($_POST['tpdoc'])){
 $EncstrAbrevTpDoc=$_POST['tpdoc'];      
 }  
+
 
 $dados=unserialize($_POST['dados']);   
 extract($dados, EXTR_PREFIX_SAME, "dados");

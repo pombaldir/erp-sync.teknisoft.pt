@@ -58,6 +58,15 @@ switch ($tokenAPI) {
     break;
     
 
+    case "w8CH8CUQNrEYp6z5":        // FERNANDO CORREIA MARQUES
+        $bdServer="192.168.1.90";
+		$bdUser="sa";
+		$bdPswd="17#PblDataETI";
+		$bdName="Emp_TREVO2";
+		$Medlog=false;
+    break;
+
+
     case "7ojOChyEEUF3":            // DIKAMAR		
         $bdServer="192.168.1.91";
 		$bdUser="sa";

@@ -35,7 +35,7 @@ if($accao=="list"){
     } 
     else if($_GET['tipo']=="taxasiva"){
         $sTable = "Tbl_Taxas_Iva"; 
-        $aColumns = array("Id","intCodigo", "strDescricao", "fltTaxa");    
+        $aColumns = array("Tbl_Taxas_Iva.Id","Tbl_Taxas_Iva.intCodigo", "Tbl_Taxas_Iva.strDescricao", "fltTaxa","strCodISONorma2");    
     }          
     else if($_GET['tipo']=="cat-entidades"){
         $sTable = "Tbl_Categoria_Entidade"; 
@@ -43,7 +43,7 @@ if($accao=="list"){
     }      
     else if($_GET['tipo']=="numeradores"){
         $sTable = "Tbl_Numeradores"; 
-        $aColumns = array("Id", "strAbrevTpDoc", "strCodSeccao", "strCodExercicio","intNum_Mes00","intTpNumerador"); 
+        $aColumns = array("Id", "strAbrevTpDoc", "strCodSeccao", "strCodExercicio","intNum_Mes00","intTpNumerador","strFormato"); 
         $qParameters=array($aColumns[1],$aColumns[2],$aColumns[3]);
     }    
     
@@ -60,6 +60,16 @@ if($accao=="list"){
         $sTable = "Tbl_Gce_ArtigosCodigoBarras"; 
         $aColumns = array("Id", "strCodArtigo", "strCodBarras", "fltQuantidade"); 
     } 
+    else if($_GET['tipo']=="meiosexpedicao"){
+        $sTable = "Tbl_MeiosExpedicao"; 
+        $aColumns = array("Id", "strCodigo", "strDescricao"); 
+    } 
+
+    else if($_GET['tipo']=="tiposDocumentos"){
+        $sTable = "Tbl_Tipos_Documentos"; 
+        $aColumns = array("Id", "strAbreviatura", "strDescricao","strCodArmazem", "strCodClassMovStk", "intTpEntidade"); 
+    } 
+
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */     
     /*
      * Ordering
@@ -94,9 +104,19 @@ if($accao=="list"){
         $sOrder = "ORDER BY $sOrdem[0] $sOrdem[1]";  
         }
     } 
-     
-	
+    /*
+     * Filtering
+     * NOTE this does not match the built-in DataTables filtering which does it
+     * word by word on any field. It's possible to do here, but concerned about efficiency
+     * on very large tables, and MySQL's regex functionality is very limited
+     */
+    
     $sWhere = "";
+
+    if($_GET['tipo']=="taxasiva"){
+        $sWhere = "LEFT JOIN Tbl_Grh_Paises ON Tbl_Taxas_Iva.intCountryCode = Tbl_Grh_Paises.intCodigo ";
+    }
+
     if ( isset($_GET['q']) && $_GET['q'] != "" && in_array($_GET['searchField'],$aColumns))
     {
         $termo=addslashes( $_GET['q']);
@@ -168,6 +188,11 @@ if($accao=="list"){
     ); 
      
 
+    $aColumns = array_map(function ($col) {
+    $parts = explode('.', $col);
+    return end($parts);
+    }, $aColumns);
+
 	foreach($sQuery as $aRow)
 	{	
         $row = array();
@@ -196,8 +221,7 @@ if($accao=="list"){
                     "ORDER" => ["strCodTpNivel"=>"ASC"]
                 ]);	                 
                 $row['familias'] = $queryFam[0];
-            }
-            
+            }    
             
              else if ( $aColumns[$i] != ' ' )
             {

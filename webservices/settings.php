@@ -4,6 +4,9 @@ if (basename($_SERVER['SCRIPT_FILENAME']) == basename(__FILE__)) {
     exit('Forbidden');
 }
 //ini_set('memory_limit','512M');
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 
 
 
@@ -71,9 +74,9 @@ switch ($tokenAPI) {
 		$Medlog=false;
         break;
     case "24PbJ7xKCM3zutcC":		// MALAS VITESSE 
-        $bdServer="192.168.1.95";
+        $bdServer="192.168.1.96";
 		$bdUser="sa";
-		$bdPswd="platinum";
+		$bdPswd="17#PblDataETI";
 		$bdName="Emp_MVITS"; 
 		$Medlog=true;		
 		$orderDefSeller="1";
@@ -127,10 +130,13 @@ require_once dirname(__DIR__) . '/webservices/vendor/autoload.php';
  
 // Using Medoo namespace
 
+
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use Medoo\Medoo;
 
+/*
 $database = new Medoo([
 	'database_type' => 'mssql',
 	'database_name' => ''.$bdName.'',
@@ -142,6 +148,27 @@ $database = new Medoo([
 	"port" => "1433",
 	"logging" => $Medlog
 	]);
+
+*/
+
+
+try {
+    $database = new Medoo([
+        'database_type' => 'mssql',
+        'database_name' => ''.$bdName.'',
+        'server' => ''.$bdServer.'',
+        'username' => ''.$bdUser.'',
+        'password' => ''.$bdPswd.'',
+        'driver' => 'php_pdo_sqlsrv',
+        "charset" => "utf8",
+        "port" => "1433",
+        "logging" => $Medlog
+        ]);
+    } catch (PDOException $e) {
+        die(json_encode(array("success"=>0, "msg"=>$e->getMessage())));
+}
+
+
 ##########################################################################################################
 
 function getPrecos($codigo){
@@ -268,4 +295,4 @@ function titleCase($string, $delimiters = array(" ", "-", ".", "'", "O'", "Mc"),
 }
 
 
-?> 
+?>

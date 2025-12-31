@@ -2,10 +2,10 @@
 if (basename($_SERVER['SCRIPT_FILENAME']) == basename(__FILE__)) {
    # header('HTTP/1.0 403 Forbidden');
 #    exit('Forbidden');
-}/*
+}/* 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL); */
+error_reporting(E_ALL);*/ 
 //ini_set('memory_limit','512M');
 require_once dirname(__DIR__) . '/v2.0/vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
@@ -182,15 +182,16 @@ switch ($tokenAPI) {
 			$intIVACodTaxa1="7";
 			$fltIVATaxa1="23"; 
 			$strLogin="";
-			$codDiversos="DIV";
+			$codDiversos="DVR";
 			$codPortes="9191.TORP";
+			$codPortesGratis="9191.CTTNP";
 			$armazemDefault="3"; 
-			$strMeioExpedicao="";
+			$strMeioExpedicao="3";
 			$faturaEletronica="0"; 
 			$depFinTpContacto="002"; 
-			$wsLog=0; 
+			$wsLog=1; 
 	break;  
-
+ 
 
     case "DzAl9gSITm3hnbq":		   // LIVE SOUND	
         $bdServer="192.168.1.93";
@@ -481,6 +482,22 @@ function erpLog($text){
 	}  
 } 
 
+function truncate(float $number, int $decimals = 0): float
+{
+    $factor = 10 ** $decimals;
+    return floor($number * $factor) / $factor;
+}
+
+function round_up(float $number, int $decimals = 0): float
+{
+    $factor = 10 ** $decimals;
+
+    if ($number >= 0) {
+        return ceil($number * $factor) / $factor;
+    }
+
+    return floor($number * $factor) / $factor;
+}
 
 
 }

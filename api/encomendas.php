@@ -65,7 +65,7 @@ $strCodExercicio=$data['strCodExercicio'];
 $queryCliente = $database->select($sTable, ["Id"], ["intNumero" => $intNumero,"strCodSeccao" => $strCodSeccao,"strAbrevTpDoc" => $strAbrevTpDoc,"strCodExercicio" => $strCodExercicio]);	      
      
 if(is_array($queryCliente) && sizeof($queryCliente)>0){
-    die(json_encode(array("success"=>0,"errormsg"=>"Código existente")));  
+    die(json_encode(array("success"=>0,"errormsg"=>"Código $intNumero existente")));  
 }
 else if(!isset($data['intTpEntidade'])){
     die(json_encode(array("success"=>0,"errormsg"=>"Entidade inválida")));  
